@@ -8,64 +8,19 @@ The Siamese Network based tries to capture the semantic similarity between quest
 Siamese Network 孪生网络
 
 - 数据和训练后的模型下载地址
+
 [数据和训练后的模型](https://yunpan.360.cn/surl_yraIb8WaIA4)
 
 ## Requirements
-- Python 2.7
-- Pip 3
+- Python 3.6
+- Pip
 - tensorflow 1.8
 - FastText
 - Faiss
 
-## Environment Setup
-Execute requirements.txt to install dependency packages
-```bash
-pip install -r requirements.txt
-```
+现在tf 2.0，与之前的版本不兼容，可能会遇到问题。如下我搭建的环境。
 
-## Training
-1. Quora questions dataset is provided in ./data_repository directory. 
-2. To train 
-```bash
-python train_siamese_network.py
-```
-## Prediction
-Open Prediction.ipynb using Jupyter Notebook to look into Prediction module.
-
-## Results
-Given Question: **"Is it healthy to eat egg whites every day?"** most similar questions are as follows:
-1. is it bad for health to eat eggs every day
-2. is it healthy to eat once a day
-3. is it unhealthy to eat bananas every day
-4. is it healthy to eat bread every day
-5. is it healthy to eat fish every day
-6. what high protein foods are good for breakfast
-7. how do you drink more water every day
-8. what will happen if i drink a gallon of milk every day
-9. is it healthy to eat one chicken every day
-10. is it healthy to eat a whole avocado every day
-
-Due to limitation in max file size in git, I haven't uploaded trained model in git. 
-You can download pre-trained model from 
-[here](https://drive.google.com/drive/folders/1FEdvcQt-tbNCZeUKhawFxyAn6Dn7H08I?usp=sharing) and 
-unzip and paste pre-trained model to "./model_siamese_network" directory.
-
-## Note
-To train on a different dataset, you have to build a dataset consisting of similar and 
-dissimilar text pairs. 
-Empirically, you need to have at least ~200k number of pairs to achieve excellent performance. 
-Try to maintain a balance between similar and dissimilar pairs [50% - 50%] is a good choice. 
-
-
-## 使用方式
-1.执行preprocessing.py
- - 生成ft_skipgram_ws5_dim64.bin 
- - 生成metadata.tsv 
-2. 执行train_siamese_network.py
- - 生成 model.*
-3. 此时，可以预测，执行 prediction.py
-
-## 环境搭建
+### 环境搭建
 ```shell script
 conda create -n tf18 python=2.7
 source activate tf18
@@ -165,4 +120,51 @@ widgetsnbextension                 3.5.1
 zipp                               1.1.0
 ```
 
+## Environment Setup
+Execute requirements.txt to install dependency packages
+```bash
+pip install -r requirements.txt
+```
+
+## Training
+1. Quora questions dataset is provided in ./data_repository directory. 
+2. To train 
+```bash
+python train_siamese_network.py
+```
+## Prediction
+Open Prediction.ipynb using Jupyter Notebook to look into Prediction module.
+
+## Results
+Given Question: **"Is it healthy to eat egg whites every day?"** most similar questions are as follows:
+1. is it bad for health to eat eggs every day
+2. is it healthy to eat once a day
+3. is it unhealthy to eat bananas every day
+4. is it healthy to eat bread every day
+5. is it healthy to eat fish every day
+6. what high protein foods are good for breakfast
+7. how do you drink more water every day
+8. what will happen if i drink a gallon of milk every day
+9. is it healthy to eat one chicken every day
+10. is it healthy to eat a whole avocado every day
+
+Due to limitation in max file size in git, I haven't uploaded trained model in git. 
+You can download pre-trained model from 
+[here](https://drive.google.com/drive/folders/1FEdvcQt-tbNCZeUKhawFxyAn6Dn7H08I?usp=sharing) and 
+unzip and paste pre-trained model to "./model_siamese_network" directory.
+
+## Note
+To train on a different dataset, you have to build a dataset consisting of similar and 
+dissimilar text pairs. 
+Empirically, you need to have at least ~200k number of pairs to achieve excellent performance. 
+Try to maintain a balance between similar and dissimilar pairs [50% - 50%] is a good choice. 
+
+
+## 使用方式
+1.执行preprocessing.py
+ - 生成ft_skipgram_ws5_dim64.bin 
+ - 生成metadata.tsv 
+2. 执行train_siamese_network.py
+ - 生成 model.*
+3. 此时，可以预测，执行 prediction.py
 
