@@ -9,7 +9,7 @@ The Siamese Network based tries to capture the semantic similarity between quest
 > 数据和训练后的模型[下载地址](https://yunpan.360.cn/surl_yraIb8WaIA4)
 
 ## Requirements
-- Python 3.6
+- Python 2.7
 - Pip
 - tensorflow 1.8
 - FastText
