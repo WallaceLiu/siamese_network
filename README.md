@@ -13,9 +13,9 @@ Siamese Network 孪生网络
 ## Requirements
 - Python 2.7
 - Pip 3
-- Tensorflow 1.8
+- tensorflow 1.8
 - FastText
-- faiss
+- Faiss
 
 ## Environment Setup
 Execute requirements.txt to install dependency packages
@@ -59,13 +59,13 @@ Try to maintain a balance between similar and dissimilar pairs [50% - 50%] is a 
 
 ## 使用方式
 1.执行preprocessing.py
- 1) 生成ft_skipgram_ws5_dim64.bin 
- 2) 生成metadata.tsv 
+ - 生成ft_skipgram_ws5_dim64.bin 
+ - 生成metadata.tsv 
 2. 执行train_siamese_network.py
-    1) 生成 model.*
+ - 生成 model.*
 3. 此时，可以预测，执行 prediction.py
 
-## pip list
+## 环境搭建
 ```shell script
 conda create -n tf18 python=2.7
 source activate tf18
