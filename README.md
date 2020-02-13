@@ -18,7 +18,13 @@ Siamese Network 孪生网络
 - FastText
 - Faiss
 
-现在tf 2.0，与之前的版本不兼容，可能会遇到问题。如下我搭建的环境。
+### Environment Setup
+Execute requirements.txt to install dependency packages
+```bash
+pip install -r requirements.txt
+```
+
+> 现在 > tf 2.0，与之前的版本不兼容，可能会遇到各种问题。如下我搭建的环境。
 
 ### 环境搭建
 ```shell script
@@ -26,8 +32,7 @@ conda create -n tf18 python=2.7
 source activate tf18
 pip install tensorflow-cpu==1.8.0
 ```
-下面是本人所有pip安装包。能把他跑起来，稍微有点费劲。
-遇到各种问题。
+下面是本人所有pip安装包。
 ```text
 Package                            Version
 ---------------------------------- -----------
@@ -118,12 +123,6 @@ Werkzeug                           1.0.0
 wheel                              0.33.6
 widgetsnbextension                 3.5.1
 zipp                               1.1.0
-```
-
-## Environment Setup
-Execute requirements.txt to install dependency packages
-```bash
-pip install -r requirements.txt
 ```
 
 ## Training
