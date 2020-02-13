@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# idea
+.idea
+
+# syse
+.DS_Stor
+
+# model
+model_siamese_network/model.*
+model_siamese_network/*.bin

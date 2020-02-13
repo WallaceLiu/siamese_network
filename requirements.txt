@@ -1,0 +1,4 @@
+tensorflow
+fasttext
+sklearn
+faiss-cpu
