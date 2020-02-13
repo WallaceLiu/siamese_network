@@ -134,6 +134,6 @@ dmypy.json
 # syse
 .DS_Stor
 
-# model
-model_siamese_network/model.*
-model_siamese_network/*.bin
+# project file and dir
+model_siamese_network/*
+data_repository/*
