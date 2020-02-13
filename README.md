@@ -5,11 +5,8 @@ Quora question pair dataset has ~400k question pairs along with a binary label
 which states whether a pair of questions are similar or dissimilar. 
 The Siamese Network based tries to capture the semantic similarity between questions.
 
-Siamese Network 孪生网络
-
-- 数据和训练后的模型下载地址
-
-[数据和训练后的模型](https://yunpan.360.cn/surl_yraIb8WaIA4)
+> Siamese Network 孪生网络
+> 数据和训练后的模型[下载地址](https://yunpan.360.cn/surl_yraIb8WaIA4)
 
 ## Requirements
 - Python 3.6
@@ -131,6 +128,11 @@ zipp                               1.1.0
 ```bash
 python train_siamese_network.py
 ```
+> 生成如下文件：
+> 生成ft_skipgram_ws5_dim64.bin 
+> 生成metadata.tsv 
+> 生成 model.*
+ 
 ## Prediction
 Open Prediction.ipynb using Jupyter Notebook to look into Prediction module.
 
@@ -157,13 +159,3 @@ To train on a different dataset, you have to build a dataset consisting of simil
 dissimilar text pairs. 
 Empirically, you need to have at least ~200k number of pairs to achieve excellent performance. 
 Try to maintain a balance between similar and dissimilar pairs [50% - 50%] is a good choice. 
-
-
-## 使用方式
-1.执行preprocessing.py
- - 生成ft_skipgram_ws5_dim64.bin 
- - 生成metadata.tsv 
-2. 执行train_siamese_network.py
- - 生成 model.*
-3. 此时，可以预测，执行 prediction.py
-
